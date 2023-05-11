@@ -17,3 +17,36 @@ Ejecutar un contenedor que corre `MongoDB` y con el cual nos conectaremos por me
 ### Entrega
 - Documentación
 - Print de pantalla con los resultados.
+
+
+### Resolución
+
+#### Parte 1
+
+1. Correr contenedor de mongo
+```
+docker run -d -p 27017:27017 --name m1 mongo
+```
+
+2. Sobre la máquina host instalar python3 y pymongo
+
+3. Ejecutar los script de python sobre la màquina host
+
+
+```
+python3 populate.py
+```
+```
+python3 populate.py
+```
+
+
+4. Mostrar logs de mongo
+
+![mongologs](img/img1.png)
+
+
+
+
+
+
