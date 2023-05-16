@@ -200,6 +200,11 @@ docker run -d consumer
 ![dockerapprunning](img/img7.png)
 
 
+14. Comprobar la ejecución de los 2 contenedores corriendo
+
+![dockerscontenedoresrun](img/img8.png)
+
+
 ###### Contenedores juntos (docker-compose)
 
 1. Por último, sabiendo que ambos contenedores están funcionando y corriendo ahora es el momento de correrlos ambos juntos con docker-compose
@@ -207,6 +212,8 @@ docker run -d consumer
 2. Restaurar a su version original el consumer.py 
 
 3. Crear docker-compose.yml
+
+
 
 
 
