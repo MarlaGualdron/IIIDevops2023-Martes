@@ -211,9 +211,64 @@ docker run -d consumer
 
 2. Restaurar a su version original el consumer.py 
 
-3. Crear docker-compose.yml
+3. Crear docker-compose.yml en el directorio src
+
+```
+version: "3"
+
+services:
+  app:
+   build: ./app
+   container_name: service-flask-app
+   ports:
+      - "8000:8000"
+
+  consumer:
+   build: ./consumer
+   environment:
+       LOCAL: "true"
+
+```
+
+4. Correr el docker-compose en modo verbose (para ver si levantan los contenedores)
+
+```
+docker-compose up 
+```
+
+5. ó correr el docker-compose en modo background 
+
+```
+docker-compose up -d
+```
+
+6. Comprobar que los contenedores están corriendo
+
+```
+docker ps
+```
+
+7. Comprobar que el nombre del contenedor de la app se llame "service-flask-app"
+
+![dockerscomposeup](img/img9.png)
 
 
+8. Por último, comprobar que ambos contenedores se  conectan mediante la opción de logs de docker y el id correspondiente de cada contenedor
+
+```
+docker logs -f <id consumer>
+```
+
+![dockerscomposeup](img/img10.png)
+
+```
+docker logs -f <id app>
+```
+
+![dockerscomposeup](img/img11.png)
 
 
+9. Ver mediante dos consolas ambos corriendo
 
+
+![dockerscomposeup](img/img12.png)
