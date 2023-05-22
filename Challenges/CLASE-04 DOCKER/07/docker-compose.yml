@@ -1,0 +1,22 @@
+version: '3'
+services:
+  back_fastapi:
+    image: estebandem/backend_pokemon:1.0.0
+    ports:
+      - 8000:8000
+    networks:
+      my-network:
+        aliases:
+          - backend
+
+  front_react:
+    image: estebandem/frontend_pokemon:1.0.0
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_URL_PRODUCTION=http://backend:8000
+    networks:
+      my-network:
+
+networks:
+  my-network:
