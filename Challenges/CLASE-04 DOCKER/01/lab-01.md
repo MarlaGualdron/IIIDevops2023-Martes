@@ -77,6 +77,8 @@ curl locahost:82
    ![dockerrun](img/img3.png)
 
 
+4. Crear un script para automatizar el despliegue del challenge deploy.sh 
+
 
 
 
